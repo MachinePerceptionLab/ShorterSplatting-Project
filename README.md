@@ -1,1 +1,3 @@
-# ShorterGuassian-Project
+# ShorterSplatting-Project
+
+Project webpage repo.
