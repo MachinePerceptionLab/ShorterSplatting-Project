@@ -169,7 +169,7 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <h2 class="title is-3" style="margin-top: -20px">Full Video</h2>
-        <video width="800" poster="" id="Video" controls muted loop playsinline>
+        <video width="800" poster="" id="Video" controls muted loop playsinline preload="none">
           <source src="./videos/JiaqiLiu_CVPR2026_3DGSSpeedup_web_h264.mp4" type="video/mp4">
         </video>
         <div class="content has-text-justified">
@@ -326,7 +326,7 @@
 
 <script>
   (function () {
-    var MAX_CONCURRENT_LOADS = 2;
+    var MAX_CONCURRENT_LOADS = 4;
     var activeLoads = 0;
     var loadQueue = [];
 
@@ -411,23 +411,11 @@
         video.dataset.lazyLoading = "0";
       });
 
-      var observer = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              queueVideo(entry.target, false);
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { rootMargin: "300px 0px" }
-      );
-
       lazyVideos.forEach(function (video) {
-        observer.observe(video);
         video.addEventListener("click", function () {
           queueVideo(video, true);
         });
+        queueVideo(video, false);
       });
     }
 
