@@ -1,0 +1,85 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-title .title-emphasis,
+.publication-title .title-keyword {
+  color: #2F80ED;
+  font-weight: 700;
+}
+
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.link-block a,
+.link-block button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.publication-links .link-block {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.teaser-section {
+  padding-top: 0.75rem;
+  margin-top: -1rem;
+}
+
+.training-video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.training-video-card {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fff;
+}
+
+.training-video-title {
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.training-video-card video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .training-video-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .training-video-grid {
+    grid-template-columns: 1fr;
+  }
+}
