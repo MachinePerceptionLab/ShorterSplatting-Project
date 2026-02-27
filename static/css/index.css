@@ -39,6 +39,11 @@ body {
   margin-right: 6px;
 }
 
+.teaser-section {
+  padding-top: 0.75rem;
+  margin-top: -1rem;
+}
+
 .training-video-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
