@@ -1,0 +1,40 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-title .title-emphasis,
+.publication-title .title-keyword {
+  color: #2F80ED;
+  font-weight: 700;
+}
+
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.link-block a,
+.link-block button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.publication-links .link-block {
+  margin-left: 6px;
+  margin-right: 6px;
+}
