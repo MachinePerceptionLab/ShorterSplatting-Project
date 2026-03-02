@@ -72,8 +72,59 @@ body {
   display: block;
 }
 
+.fps-table-wrap {
+  margin-top: 18px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fps-table-caption {
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.fps-table-scroll {
+  overflow-x: auto;
+}
+
+.fps-table {
+  width: auto;
+  min-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.fps-table th,
+.fps-table td {
+  border: 1px solid #d7dbe0;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.fps-table thead th {
+  background: #f7f9fc;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 600;
+}
+
+.fps-table .fps-ours {
+  font-weight: 700;
+}
+
 @media (max-width: 640px) {
   .training-video-grid {
     gap: 12px;
+  }
+
+  .fps-table-caption {
+    font-size: 0.9rem;
+  }
+
+  .fps-table th,
+  .fps-table td {
+    padding: 8px 10px;
   }
 }
