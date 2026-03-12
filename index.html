@@ -139,34 +139,35 @@
       <div class="column is-full-width">
         <h2 class="title is-3" style="margin-top: -20px">Faster Rendering During Testing</h2>
         <p>Our method achieves the highest frame rate (FPS).</p>
+        <p>All methods use the same Gaussian count in each scene.</p>
         <p>Due to GitHub's 100 MB file-size limit, these videos are provided in compressed quality.</p>
       </div>
     </div>
 
     <div class="training-video-grid">
       <div class="training-video-card">
-        <p class="training-video-title">Bicycle</p>
+        <p class="training-video-title">Bicycle (5,987,095 Gaussians)</p>
         <video controls muted playsinline preload="none">
           <source src="./videos/testing_rendered_trajectory/compressed_hq/combined_bicycle_rendered_trajectory__new.mp4" type="video/mp4">
         </video>
       </div>
 
       <div class="training-video-card">
-        <p class="training-video-title">Counter</p>
+        <p class="training-video-title">Counter (1,190,919 Gaussians)</p>
         <video controls muted playsinline preload="none">
           <source src="./videos/testing_rendered_trajectory/compressed_hq/combined_counter_rendered_trajectory__new.mp4" type="video/mp4">
         </video>
       </div>
 
       <div class="training-video-card">
-        <p class="training-video-title">Garden</p>
+        <p class="training-video-title">Garden (5,728,191 Gaussians)</p>
         <video controls muted playsinline preload="none">
           <source src="./videos/testing_rendered_trajectory/compressed_hq/combined_garden_rendered_trajectory__new.mp4" type="video/mp4">
         </video>
       </div>
 
       <div class="training-video-card">
-        <p class="training-video-title">Kitchen</p>
+        <p class="training-video-title">Kitchen (1,803,735 Gaussians)</p>
         <video controls muted playsinline preload="none">
           <source src="./videos/testing_rendered_trajectory/compressed_hq/combined_kitchen_rendered_trajectory__new.mp4" type="video/mp4">
         </video>
@@ -174,7 +175,7 @@
     </div>
 
     <div class="fps-table-wrap">
-      <p class="fps-table-caption">Average testing FPS on the Mip-NeRF 360 dataset (same rendering resolution for all methods).</p>
+      <p class="fps-table-caption">Average testing FPS on the Mip-NeRF 360 dataset (same rendering resolution and same final Gaussian count per scene for all methods).</p>
       <div class="fps-table-scroll">
         <table class="fps-table" aria-label="Average testing FPS on Mip-NeRF 360">
           <thead>
