@@ -43,22 +43,23 @@ body {
   z-index: 50;
 }
 
-.poster-modal-content {
+.poster-modal .modal-content.poster-modal-content {
   width: min(98vw, 1800px);
+  max-width: 98vw;
   max-height: 96vh;
   overflow: hidden;
   background: transparent;
   border-radius: 0;
 }
 
-.poster-modal-scroll {
+.poster-modal .poster-modal-scroll {
   max-height: 96vh;
   overflow: auto;
   background: transparent;
   text-align: center;
 }
 
-.poster-modal-image {
+.poster-modal .poster-modal-image {
   display: block;
   width: 100%;
   height: auto;
