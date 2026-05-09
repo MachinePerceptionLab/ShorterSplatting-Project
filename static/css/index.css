@@ -39,6 +39,32 @@ body {
   margin-right: 6px;
 }
 
+.poster-modal {
+  z-index: 50;
+}
+
+.poster-modal-content {
+  width: min(98vw, 1800px);
+  max-height: 96vh;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 0;
+}
+
+.poster-modal-scroll {
+  max-height: 96vh;
+  overflow: auto;
+  background: transparent;
+  text-align: center;
+}
+
+.poster-modal-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 .teaser-section {
   padding-top: 0.75rem;
   margin-top: -1rem;

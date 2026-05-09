@@ -139,6 +139,15 @@
                   <span>Code</span>
                 </a>
               </span>
+
+              <span class="link-block">
+                <button type="button" id="poster-button" class="button is-normal is-rounded is-dark" aria-haspopup="dialog" aria-controls="poster-modal">
+                  <span class="icon">
+                    <i class="fas fa-image"></i>
+                  </span>
+                  <span>Poster</span>
+                </button>
+              </span>
             </div>
           </div>
         </div>
@@ -146,6 +155,15 @@
     </div>
   </div>
 </section>
+
+<div id="poster-modal" class="modal poster-modal" role="dialog" aria-modal="true" aria-label="Poster preview" aria-hidden="true" tabindex="-1">
+  <div class="modal-background" data-poster-close></div>
+  <div class="modal-content poster-modal-content">
+    <div class="poster-modal-scroll">
+      <img id="poster-modal-image" class="poster-modal-image" data-src="./images/poster_2026-05-08.png" alt="ShorterSplatting CVPR 2026 poster">
+    </div>
+  </div>
+</div>
 
 <section class="section teaser-section">
   <div class="container is-max-desktop">
@@ -302,7 +320,7 @@
       <div class="column is-full-width">
         <h2 class="title is-3" style="margin-top: -20px">Full Video</h2>
         <video width="800" poster="" id="Video" controls muted loop playsinline preload="none">
-          <source src="./videos/JiaqiLiu_CVPR2026_3DGSSpeedup_web_h264.mp4" type="video/mp4">
+          <source src="./videos/cvpr26_3dgs_full_web_h264.mp4" type="video/mp4">
         </video>
         <div class="content has-text-justified">
           <p></p>
@@ -455,6 +473,51 @@
 </footer>
 
 <script>
+  (function () {
+    function initPosterModal() {
+      var button = document.getElementById("poster-button");
+      var modal = document.getElementById("poster-modal");
+      var image = document.getElementById("poster-modal-image");
+      var closeButtons = Array.prototype.slice.call(
+        document.querySelectorAll("[data-poster-close]")
+      );
+
+      if (!button || !modal || !image) {
+        return;
+      }
+
+      function openPosterModal() {
+        if (!image.src) {
+          image.src = image.dataset.src;
+        }
+        modal.classList.add("is-active");
+        modal.setAttribute("aria-hidden", "false");
+        document.documentElement.classList.add("is-clipped");
+        modal.focus();
+      }
+
+      function closePosterModal() {
+        modal.classList.remove("is-active");
+        modal.setAttribute("aria-hidden", "true");
+        document.documentElement.classList.remove("is-clipped");
+        button.focus();
+      }
+
+      button.addEventListener("click", openPosterModal);
+      closeButtons.forEach(function (closeButton) {
+        closeButton.addEventListener("click", closePosterModal);
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && modal.classList.contains("is-active")) {
+          closePosterModal();
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", initPosterModal);
+  })();
+
   (function () {
     var MAX_CONCURRENT_LOADS = 4;
     var activeLoads = 0;
